@@ -14,7 +14,7 @@ command -v rsync >/dev/null 2>&1 || { echo >&2 "I require rsync but it's not ins
 
 echo 'Now building your site ... this can take a while.'
 
-bundle exec Jekyll build > /dev/null
+bundle exec jekyll build > /dev/null
 
 # This command requires an active working rsync server on the other side. Please check with your ISP/Host if they allow this.
 # Fill in username (you need to be able to SSH with this user!), the hostname & folder that you want your site in. This can be eg. ~/public_html
@@ -23,4 +23,4 @@ bundle exec Jekyll build > /dev/null
 
 echo 'Ready. Time to sync.'
 
-rsync -avh --delete _site/ foo@foo.bar:~/public_html/ 
+rsync -avh --delete _site/ geo@195.201.5.192:/var/www/photo-stream/
