@@ -75,3 +75,7 @@ image_processing:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+#
+
+exclude:
+    - build-n-rsync.sh
